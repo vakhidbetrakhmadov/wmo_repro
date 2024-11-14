@@ -1,0 +1,11 @@
+common --noenable_bzlmod
+
+build --announce_rc
+build --subcommands
+build --copt=-v
+build --swiftcopt=-v
+build --linkopt=-v
+
+build:ios-release --ios_multi_cpus=sim_arm64
+build:ios-release --compilation_mode=opt
+build:ios-release --features=swift.opt_uses_wmo
